@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
     res.status(200).send(HTML);
 });
 
+module.exports = fromExpress(app);
+
 function renderView(locals) {
     return `
     <!DOCTYPE html>
