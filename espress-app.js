@@ -1,7 +1,5 @@
 "use latest";
 
-//var express = require("express");
-//var bodyParser = require("body-parser");
 import express from 'express';
 import { fromExpress } from 'webtask-tools';
 import bodyParser from 'body-parser';
