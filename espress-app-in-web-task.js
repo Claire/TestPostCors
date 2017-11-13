@@ -34,16 +34,16 @@ function renderView(locals) {
       <form method="POST" action="${locals.destUrl}">
       <input type="text" name="lg" />
       <input type="submit" />
-     <button onclick="postViaJs()">By Js</button>
+      <button onclick="postViaJs()">By Js</button>
 
       <script> function postViaJs() { 
         var requestConfig = { 
           url : "${locals.destUrl}", 
           method: 'post', 
           data: {lg: document.getElementsByName('lg')[0].value},
-           withCredentials: true 
-          }; 
-          axios(requestConfig)
+          withCredentials: true 
+        }; 
+        axios(requestConfig)
           .then(function(data) { 
               console.log("success result = " + JSON.stringify(data))
            }) 
