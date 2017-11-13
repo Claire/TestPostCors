@@ -1,7 +1,10 @@
 "use latest";
 
-var express = require("express");
-var bodyParser = require("body-parser");
+//var express = require("express");
+//var bodyParser = require("body-parser");
+import express from 'express';
+import { fromExpress } from 'webtask-tools';
+import bodyParser from 'body-parser';
 const app = express();
 
 app.use(bodyParser.json());
@@ -57,4 +60,4 @@ function renderView(locals) {
   `;
 }
 
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+//app.listen(3000, () => console.log("Example app listening on port 3000!"));
