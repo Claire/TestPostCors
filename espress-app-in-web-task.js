@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     const HTML = renderView({
-        title: "My Webtask View",
-        body: "<h1>Simple webtask view</h1>",
+        title: "Test Post Cors from Form Sumbit and Ajax",
+        body: "<h1>Test Post Cors from Form Sumbit and Ajax Call</h1>",
         destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack&",
     });
 
@@ -36,6 +36,7 @@ function renderView(locals) {
       <form method="POST" action="${locals.destUrl}">
       <input type="text" name="lg" />
       <input type="submit" />
+      <br/>
       <button onclick="postViaJs()">By Js</button>
 
       <script> function postViaJs() { 
