@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     const HTML = renderView({
         title: "My Webtask View",
         body: "<h1>Simple webtask view</h1>",
-        destUrl: "https://team.quickbase.com?a=QBI_logtrack&",
+        destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack&",
     });
 
     res.set("Content-Type", "text/html");
