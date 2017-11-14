@@ -41,7 +41,7 @@ function renderView(locals) {
       <p>Sends to ${locals.destUrl}</p>
 
       <script> function postViaJs() { 
-       var urlForAjax = ${locals.destUrl} + "&fromAjax=true"
+       var urlForAjax = "${locals.destUrl}"" + "&fromAjax=true"
         var requestConfig = { 
           url : urlForAjax, 
           method: 'post', 
