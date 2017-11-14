@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
     const HTML = renderView({
         title: "My Webtask View",
         body: "<h1>Simple webtask view</h1>",
-        destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack&",
+        destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack&xml=true",
     });
 
 res.set("Content-Type", "text/html");
@@ -24,7 +24,7 @@ function renderView(locals) {
     <head>
       <meta charset="utf-8">
       <title>${locals.title}</title>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
 
     <body>
@@ -37,26 +37,26 @@ function renderView(locals) {
         Or click Ajax button for Post via ajax call <button onclick="postViaJs()">Ajax</button>
         <p>Sends to ${locals.destUrl}</p>
       </form>
-      
-      <script> function postViaJs() { 
+
+      <script> function postViaJs() {
         var urlForAjax = "${locals.destUrl}" + "&fromAjax=true";
         var inputValue = document.getElementsByName('lg')[0].value;
-        var requestConfig = { 
-          url : urlForAjax, 
-          method: 'post', 
+        var requestConfig = {
+          url : urlForAjax,
+          method: 'post',
           data: {lg: inputValue },
-          withCredentials: true 
-        }; 
+          withCredentials: true
+        };
         axios(requestConfig)
-          .then(function(data) { 
+          .then(function(data) {
               console.log("success result = " + JSON.stringify(data))
-           }) 
-          .catch(function(error) { 
-              // If there is any error catch them here 
-              console.log("error getting request.url: " + requestConfig.url + " error:" + JSON.stringify(error, null, 2)); 
-            }); 
-        } 
-      </script>      
+           })
+          .catch(function(error) {
+              // If there is any error catch them here
+              console.log("error getting request.url: " + requestConfig.url + " error:" + JSON.stringify(error, null, 2));
+            });
+        }
+      </script>
     </body>
     </html>
   `;
