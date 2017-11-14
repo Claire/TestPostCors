@@ -38,14 +38,17 @@ function renderView(locals) {
       <br/><br/>
       Click Submit button for form Post <input type="submit" />
       Or click Ajax button for Post via ajax call <button onclick="postViaJs()">Ajax</button>
+      <input type="text" hidden name=xml value=true/>
       <p>Sends to ${locals.destUrl}</p>
-
+     </form>
       <script> function postViaJs() { 
        var urlForAjax = "${locals.destUrl}" + "&fromAjax=true"
         var requestConfig = { 
           url : urlForAjax, 
           method: 'post', 
-          data: {lg: document.getElementsByName('lg')[0].value},
+          data: {lg: document.getElementsByName('lg')[0].value,
+             xml:true
+          },
           withCredentials: true 
         }; 
         axios(requestConfig)
