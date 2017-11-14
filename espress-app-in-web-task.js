@@ -35,10 +35,10 @@ function renderView(locals) {
       ${locals.body}
       <p>Sends post to ${locals.destUrl}</p>
       <form method="POST" action="${locals.destUrl}">
-      <input type="text" name="lg" />
-      <input type="submit" />
+      Enter Anything here <input type="text" name="lg" />
+      Click Submit for Form Post<input type="submit" />
       <br/>
-      <button onclick="postViaJs()">By Js</button>
+      Click Ajax for Post via Ajax call <button onclick="postViaJs()">Ajax</button>
 
       <script> function postViaJs() { 
         var requestConfig = { 
