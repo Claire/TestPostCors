@@ -36,7 +36,7 @@ function renderView(locals) {
       <p>Sends post to ${locals.destUrl}</p>
       <form method="POST" action="${locals.destUrl}">
       Enter Anything here <input type="text" name="lg" />
-      <br/>
+      <br/><br/>
       Click Submit for Form Post<input type="submit" />
       <br/>
       Or Click Ajax for Post via Ajax call <button onclick="postViaJs()">Ajax</button>
