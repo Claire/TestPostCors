@@ -1,5 +1,10 @@
-'use latest';
 
+'use latest';
+/***
+ *  Coded for use on https://webtask.io 
+ *  service for serverless endpoints
+ *
+ ***/
 import express from 'express';
 import { fromExpress } from 'webtask-tools';
 import bodyParser from 'body-parser';
