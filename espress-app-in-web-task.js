@@ -33,6 +33,7 @@ function renderView(locals) {
 
     <body>
       ${locals.body}
+      <p>Sends post to ${locals.destUrl}</p>
       <form method="POST" action="${locals.destUrl}">
       <input type="text" name="lg" />
       <input type="submit" />
