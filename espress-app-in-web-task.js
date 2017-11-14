@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     const HTML = renderView({
         title: "Test Post Cors from Form Sumbit and Ajax",
         body: "<h1>Test Post Cors from Form Sumbit and Ajax Call</h1>",
-        destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack&",
+        destUrl: "https://team.quickbase.com/db/main?a=QBI_logtrack",
     });
 
     res.set("Content-Type", "text/html");
@@ -36,9 +36,10 @@ function renderView(locals) {
       <p>Sends post to ${locals.destUrl}</p>
       <form method="POST" action="${locals.destUrl}">
       Enter Anything here <input type="text" name="lg" />
+      <br/>
       Click Submit for Form Post<input type="submit" />
       <br/>
-      Click Ajax for Post via Ajax call <button onclick="postViaJs()">Ajax</button>
+      Or Click Ajax for Post via Ajax call <button onclick="postViaJs()">Ajax</button>
 
       <script> function postViaJs() { 
         var requestConfig = { 
