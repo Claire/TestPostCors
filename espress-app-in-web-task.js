@@ -42,7 +42,7 @@ function renderView(locals) {
 
       <script> function postViaJs() { 
         var requestConfig = { 
-          url : "${locals.destUrl}&fromAjax=true, 
+          url : "${locals.destUrl}&fromAjax=true", 
           method: 'post', 
           data: {lg: document.getElementsByName('lg')[0].value},
           withCredentials: true 
