@@ -33,7 +33,7 @@ function renderView(locals) {
 
     <body>
       ${locals.body}
-      <form method="POST" action="${locals.destUrl}&fromAjax=false">
+      <form method="POST" action="${locals.destUrl}&fromForm=true">
       Enter anything here <input type="text" name="lg" />
       <br/><br/>
       Click Submit button for form Post <input type="submit" />
@@ -41,8 +41,9 @@ function renderView(locals) {
       <p>Sends to ${locals.destUrl}</p>
 
       <script> function postViaJs() { 
+       var urlForAjax = ${locals.destUrl} + "&fromAjax=true"
         var requestConfig = { 
-          url : "${locals.destUrl}&fromAjax=true", 
+          url : urlForAjax, 
           method: 'post', 
           data: {lg: document.getElementsByName('lg')[0].value},
           withCredentials: true 
