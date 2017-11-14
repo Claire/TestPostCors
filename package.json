@@ -1,0 +1,16 @@
+{
+	"name": "testcorspost",
+	"version": "1.0.0",
+	"license": "ISC",
+	"author": "Claire Martinez <cmartinez@quickbase.com>",
+	"main": "expresscmd.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"express": "^4.16.2",
+		"prettier": "^1.8.2",
+		"webtask-tools": "^3.2.0"
+	}
+}
